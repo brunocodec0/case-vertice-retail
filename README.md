@@ -63,11 +63,6 @@ A regra principal do produto: os números vêm sempre da camada analítica, e a 
 | Rastreamento proativo de pedidos | Iniciar desova do estoque de Moda | Comitê quinzenal de margem |
 | Frete mínimo no Marketplace para pedidos de margem comprimida | Revisar alocação de mídia | Migrar clientes Bronze para faixas de maior LTV |
 
-## Minha atuação
-
-- Validação das hipóteses **H05 (Produtos)** e **H06 (Clientes)**
-- Diagnóstico de negócio e árvore de hipóteses, junto com a squad
-
 ## Stack do MVP
 
 Python (pandas) na camada analítica e de alertas, API analítica, protótipo web em HTML/CSS/JavaScript e testes automatizados com `unittest`. Detalhes de execução na [documentação técnica](docs/00-readme-tecnico.md).
