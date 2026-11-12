@@ -157,7 +157,7 @@ e sem duplicar filtros:
 Os filtros globais continuam valendo. Quando um filtro não se aplica a uma frente —
 período e canal em Estoque, canal e categoria em Atendimento — a tela avisa em vez de
 ignorar em silêncio. Definição do SLA em
-[`docs/16`](docs/16-frentes-de-negocio.md).
+[`docs/16`](16-frentes-de-negocio.md).
 
 ## Filtros e métricas disponíveis
 
@@ -212,7 +212,7 @@ As cinco frentes novas exigem `app.server` no ar: elas calculam sob demanda, e o
 `dados.js` estático só contém vendas agregadas. Abrir `index.html` sem processo nenhum
 deixa apenas a aba Geral funcionando. **Decidido em 2026-09-20 não cobrir esse cenário** —
 as alternativas custariam 5,83 MB a mais no payload e lógica de KPI duplicada em
-JavaScript. Detalhes em [`docs/16`](docs/16-frentes-de-negocio.md).
+JavaScript. Detalhes em [`docs/16`](16-frentes-de-negocio.md).
 
 Isso é independente de `AI_MODE=offline`, que desliga apenas a IA.
 
@@ -226,7 +226,7 @@ node tools/verificar_tendencias.mjs
 ```
 
 São 25 asserções sobre a tabela de valores, a cobertura da semana 53, a troca de
-granularidade e as frentes de negócio nesta seção. Detalhes em [`docs/18`](docs/18-correcoes-tendencias.md).
+granularidade e as frentes de negócio nesta seção. Detalhes em [`docs/18`](18-correcoes-tendencias.md).
 
 ## Solução de problemas
 
@@ -234,10 +234,10 @@ granularidade e as frentes de negócio nesta seção. Detalhes em [`docs/18`](do
 - **`/api/categories` retorna 404**: encerre uma possível API antiga com `Ctrl + C` e inicie novamente `python -m app.server`.
 - **Porta 8765 ocupada**: execute `netstat -ano | Select-String ':8765'` e encerre o terminal antigo da API.
 - **Alterações não aparecem**: reinicie a API e atualize o navegador com `Ctrl + F5`.
-- **Erro ao preparar os dados**: confirme os nomes dos cinco arquivos dentro do diretório `Data`. Manifestos gerados no Windows são lidos normalmente em Linux desde 2026-09-20; ver [`docs/17`](docs/17-portabilidade-de-caminhos.md).
+- **Erro ao preparar os dados**: confirme os nomes dos cinco arquivos dentro do diretório `Data`. Manifestos gerados no Windows são lidos normalmente em Linux desde 2026-09-20; ver [`docs/17`](17-portabilidade-de-caminhos.md).
 - **Aba "Perguntar" desabilitada**: `AI_API_KEY` não estava definida quando a API subiu. Defina a variável e reinicie `python -m app.server`. Para trabalhar sem credencial, use `AI_MODE=offline`.
 - **"o provedor devolveu resposta vazia"**: o gateway injeta ferramentas próprias e o modelo às vezes as chama em vez de responder. Reformule a pergunta.
 
 ## Documentação
 
-A documentação de escopo, arquitetura, métricas, rastreabilidade e plano de implementação está disponível em [`docs/`](docs/).
+A documentação de escopo, arquitetura, métricas, rastreabilidade e plano de implementação está disponível em [`docs/`]().
